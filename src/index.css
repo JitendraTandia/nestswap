@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Garet-normal;
+  font-style: normal;
+  src: url("../src/assets/fonts/Garet-Book.ttf") format("ttf");
+}
