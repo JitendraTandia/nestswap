@@ -1,11 +1,11 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Logo from "../../assets/nestswap.png";
 import { FooterList } from "../../data/SemanticsData";
 
 const Footer = () => {
   return (
-    <>
-      <footer className="p-2 bg-white shadow flex flex-col md:flex-row md:justify-around items-center">
-        {/* <div className="flex items-center flex-col p-2">
+    <footer className="p-2 bg-white shadow-lg">
+      {/* <div className="flex items-center flex-col p-2">
           <img
             className="my-5 "
             src={Logo}
@@ -18,15 +18,37 @@ const Footer = () => {
             consectetur adipisicing elit.
           </p>
         </div> */}
+
+      {/* SOCIALS */}
+      <div className="flex justify-between md:justify-end gap-4 text-white text-xl px-5 md:p-0">
+        <div className="rounded-full bg-black p-2">
+          <FaTwitter />
+        </div>
+        <div className="rounded-full bg-black p-2">
+          <FaFacebook />
+        </div>
+        <div className="rounded-full bg-black p-2">
+          <FaLinkedin />
+        </div>
+        <div className="rounded-full bg-black p-2">
+          <FaInstagram />
+        </div>
+      </div>
+
+      {/* FOOTER LISTS */}
+      <div className="flex flex-col md:flex-row md:justify-around items-center">
         <div className="flex flex-col p-2 text-center lg:text-left">
           <h3 className="text-gray-600">Let's start working together</h3>
-          <h2 className="font-bold text-4xl"> nestswap@gmail.com</h2>
-          <p className="text-gray-400 text-sm mt-10 hidden lg:block">© Copyright 2025 by NestSwap</p>
+          <h2 className="font-bold text-2xl">
+            <a href="mailto:nestswap@gmail.com">nestswap@gmail.com</a>
+          </h2>
+          <p className="text-gray-400 text-sm mt-10 hidden md:block">
+            © Copyright 2025 by NestSwap
+          </p>
         </div>
 
-        {/* COMPANY */}
         <div className="flex flex-col p-2" id="options">
-          <ul className="flex flex-col text-center lg:text-left">
+          <ul className="flex flex-col text-center ml-2 md:text-left">
             {FooterList.map((item, index) => (
               <li key={index}>{item.title}</li>
             ))}
@@ -42,12 +64,14 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="text-sm text-gray-400 text-center md:hidden">
-          <p>Privacy Policy . Stylus Marketing . Terms & Conditions</p>
-          <p>© Copyright 2025 by NestSwap</p>
-        </div>
-      </footer>
-    </>
+      </div>
+
+      {/* PRIVACY POLICiES */}
+      <div className="text-sm text-gray-400 text-center ">
+        <p>Privacy Policy . Stylus Marketing . Terms & Conditions</p>
+        <p className="md:hidden">© Copyright 2025 by NestSwap</p>
+      </div>
+    </footer>
   );
 };
 

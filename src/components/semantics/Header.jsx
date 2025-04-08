@@ -19,12 +19,12 @@ const Header = () => {
       {/* MOBILE RESPONSIVE MENU WITH LIST ITEMS */}
       <nav
         ref={navDiv}
-        className="absolute bg-white shadow-lg lg:shadow-none shadow-gray-700 min-h-[40vh] md:min-h-fit flex items-center justify-center left-0 top-[-80vh] duration-1000 w-full lg:w-auto lg:static"
+        className="absolute bg-white shadow-lg lg:shadow-none min-h-[40vh] md:min-h-fit flex items-center justify-center left-0 top-[-80vh] duration-1000 w-full lg:w-auto lg:static"
       >
         <ul className="flex flex-col lg:flex-row items-center gap-4 my-5">
           {NavList.map((item, index) => (
             <Link key={index} to={item.url}>
-              <li className="px-2.5 hover:text-gray-400 duration-300 hover:cursor-pointer">
+              <li className="px-2.5 font-semibold hover:text-gray-400 duration-300 hover:cursor-pointer">
                 {item.title}
               </li>
             </Link>
