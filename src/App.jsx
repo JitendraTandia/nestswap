@@ -1,15 +1,17 @@
-
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/semantics/Layout";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <Hero/>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
